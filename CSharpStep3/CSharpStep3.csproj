@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Method_AdvancedMultiple.Program</StartupObject>
+    <StartupObject>Method_AdvancedMultiple.StudentOperations.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

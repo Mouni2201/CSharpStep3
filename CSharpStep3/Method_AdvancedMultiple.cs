@@ -1,8 +1,4 @@
-﻿using Method_Advanced;
-using System;
-using System.Net.Http.Headers;
-using System.Security.Cryptography.X509Certificates;
-
+﻿using System;
 namespace Method_AdvancedMultiple
 {
     class Student
@@ -69,7 +65,7 @@ namespace Method_AdvancedMultiple
             return new Student[]
             {
                 new Student()
-        {
+                {
             Name = "Khushal",
                 Age = 2,
                 Subject = "Java"
@@ -88,49 +84,69 @@ namespace Method_AdvancedMultiple
                 Age = 25,
                 Subject = "JAVASCRIPT"
             }
+
     };
 
 
 
 
-    }
-    public static Student GetStudent()
-        {
-            return new Student()
-         {
-            
-            
-                Name = "Khushal",
-                Age = 2,
-                Subject = "Java"
-            };
-     }
+        }
+        //public static Student GetStudent()
+        //    {
+        //        return new Student()
+        //     {
+
+
+        //            Name = "Khushal",
+        //            Age = 2,
+        //            Subject = "Java"
+        //        };
+        // }
 
         public static Student Updatedstudent(Student student)
         {
             student.Subject = student.Subject + " - Advanced";
             return student;
         }
-    }
-    class Program
-    {
-        static void Main()
+
+        public static Student[] GetUpdatedstudents(Student[] student)
         {
-            //insted of Stuudent[] we can use var and dynamic
-            Student[] studentList = StudentOperations.GetStudent();
-            Console.WriteLine("List of student");
-
-            foreach (Student student in studentList)
+            foreach (Student student2 in student)
             {
-                Console.WriteLine($"{student.Name}, {student.Age}, {student.Subject}");
+                student2.Subject = student2.Subject + " - Advanced concepts";
+                
             }
+            return student;
 
-            Student Kushal = StudentOperations.Updatedstudent(new Student(){
-                Name = "Kushal",
+        }
+
+        class Program
+        {
+            static void Main()
+            {
+                //insted of Stuudent[] we can use var and dynamic
+                Student[] studentList = StudentOperations.GetStudent();
+                Console.WriteLine("List of student");
+
+                foreach (Student student in studentList)
+                {
+                    Console.WriteLine($"{student.Name}, {student.Age}, {student.Subject}");
+                }
+
+                Student Kushal = StudentOperations.Updatedstudent(new Student()
+                {
+                    Name = "Kushal",
                     Age = 2,
-                Subject = "JAVA"
-            });
-            Console.WriteLine($"Now kushal subject is after Updatedstudent:{Kushal.Subject}");
+                    Subject = "JAVA"
+                });
+                Console.WriteLine($"Now kushal subject is after Updatedstudent:{Kushal.Subject}");
+
+                Student[] Kushal1 = StudentOperations.GetUpdatedstudents(studentList);
+                foreach (Student student in studentList)
+                {
+                    Console.WriteLine(student.Subject);
+                }
+            }
         }
     }
 }
