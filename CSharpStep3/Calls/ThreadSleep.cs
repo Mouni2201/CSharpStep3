@@ -10,9 +10,12 @@ namespace ThreadSleep
         {
            
             Console.WriteLine("Start the process");
-            var startTime = DateTime.Now;
+           
             Thread.Sleep(5000);
-            Console.WriteLine("End the Process");
+            Console.WriteLine("Begin the Process");
+            Thread.Sleep(7000);
+
+            Console.WriteLine("The End..");
             
         }
     }
