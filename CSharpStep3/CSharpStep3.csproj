@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>CompileTimeDemo.Program</StartupObject>
+    <StartupObject>ThreadSleep.ThreadSleep</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,13 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asynchronous.cs" />
     <Compile Include="Demo\compile.cs" />
     <Compile Include="Demo\demo.cs" />
+    <Compile Include="Method ref and out parameter.cs" />
     <Compile Include="Methods Advanced.cs" />
     <Compile Include="Method_AdvancedMultiple.cs" />
     <Compile Include="Demo\practice demo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Synchronous call.cs" />
+    <Compile Include="ThreadSleep.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
