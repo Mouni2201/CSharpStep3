@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>AsynchronousCalls.Program</StartupObject>
+    <StartupObject>TextMessage.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,9 @@
     <Compile Include="Calls\Async.cs" />
     <Compile Include="Calls\Asynchronous.cs" />
     <Compile Include="Calls\DelayAsync.cs" />
+    <Compile Include="Calls\StudentTask.cs" />
+    <Compile Include="Calls\TaskDatatypeAsync.cs" />
+    <Compile Include="Calls\TaskDelay.cs" />
     <Compile Include="Demo\compile.cs" />
     <Compile Include="Demo\demo.cs" />
     <Compile Include="Method ref and out parameter.cs" />
